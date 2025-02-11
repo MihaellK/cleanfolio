@@ -74,3 +74,74 @@
     color: var(--primary-color);
   }
   
+
+  .projectCard-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-content {
+    background: var(--clr-bg, white);
+    color: var(--clr-fg, black);
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
+  .modal-content h2 {
+    margin-bottom: 1em;
+    font-size: 1.8rem;
+  }
+  
+  .modal-content p {
+    margin-bottom: 1em;
+    font-size: 1rem;
+    color: var(--clr-fg-alt);
+  }
+  
+  .modal-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 1.5em 0;
+    justify-content: center;
+  }
+  
+  .modal-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .modal-image:hover {
+    transform: scale(1.1);
+  }
+  
+  /* .project__actions {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1.5em;
+  }
+  
+  .project__icon-link {
+    font-size: 1.5rem;
+    color: var(--clr-fg);
+    transition: color 0.3s ease;
+  }
+  
+  .project__icon-link:hover {
+    color: var(--clr-primary);
+  } */
+  

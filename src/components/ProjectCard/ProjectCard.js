@@ -1,31 +1,61 @@
-import uniqid from 'uniqid'
 import React, { useState } from 'react';
+import uniqid from 'uniqid';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LaunchIcon from '@material-ui/icons/Launch';
+import Modal from '@material-ui/core/Modal';
 import './ProjectCard.css';
 
 const ProjectCard = ({ project }) => {
   const [hovered, setHovered] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   return (
-    <div 
-      className={`projectCard ${hovered ? 'projectCard--hovered' : ''}`}
-      style={{ backgroundImage: `url(${project.image || 'https://picsum.photos/id/235/200/300'})` }}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-    >
-      {hovered ? (
-        <div className="project__content">
-          <h3>{project.name}</h3>
-          <p className="project__description">{project.description}</p>
+    <>
+      <div 
+        className={`projectCard ${hovered ? 'projectCard--hovered' : ''}`}
+        style={{ backgroundImage: `url(${project.image || 'https://picsum.photos/id/235/200/300'})` }}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        onClick={handleOpen}
+        role="button"
+        tabIndex={0}
+        onKeyPress={(e) => e.key === 'Enter' && handleOpen()}
+      >
+        {hovered ? (
+          <div className="project__content">
+            <h3>{project.name}</h3>
+            <p className="project__description">{project.description}</p>
+            {project.stack && (
+              <ul className="project__stack">
+                {project.stack.map((item) => (
+                  <li key={uniqid()} className="project__stack-item">{item}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+        ) : null}
+      </div>
+
+      <Modal open={open} onClose={handleClose} className="projectCard-modal">
+        <div className="modal-content">
+          <h2>{project.name}</h2>
+          <p>{project.description}</p>
           {project.stack && (
             <ul className="project__stack">
               {project.stack.map((item) => (
-                <li key={uniqid()} className="project__stack-item">
-                  {item}
-                </li>
+                <li key={uniqid()} className="project__stack-item">{item}</li>
               ))}
             </ul>
+          )}
+          {project.images && project.images.length > 0 && (
+            <div className="modal-images">
+              {project.images.map((img) => (
+                <img key={uniqid()} src={img} alt="Project preview" className="modal-image" />
+              ))}
+            </div>
           )}
           <div className="project__actions">
             {project.sourceCode && (
@@ -40,8 +70,8 @@ const ProjectCard = ({ project }) => {
             )}
           </div>
         </div>
-      ) : null}
-    </div>
+      </Modal>
+    </>
   );
 };
 
