@@ -2,14 +2,13 @@ import './Footer.css'
 
 const Footer = () => (
   <footer className='footer'>
-    Portfolio Based in &nbsp;
     <a
       href='https://github.com/rjshkhr/cleanfolio'
       target='_blank'
       rel='noopener noreferrer'
       className='link footer__link'
     >
-      Cleanfolio By Raj Shekhar
+    Portfolio Based in Cleanfolio By Raj Shekhar
     </a>
   </footer>
 )

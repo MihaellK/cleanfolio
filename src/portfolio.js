@@ -1,7 +1,7 @@
 const header = {
   // all the properties are optional - can be left empty or deleted
   homepage: 'https://github.com/MihaellK',
-  title: '.DevFolio',
+  title: 'Mihaell.Dev',
 }
 
 const about = {
@@ -21,9 +21,10 @@ const projects = [
   // projects can be added an removed
   // if there are no projects, Projects section won't show up
   {
+    image: 'https://picsum.photos/id/237/200/300',
     name: 'Tree Counting with Computer Vision',
     description:
-      'Tree Counting System using Drone images utilizing Computer Vision models. Project developed in partnership with Abundance Brasil.l',
+      'Tree Counting System using Drone images utilizing Computer Vision models. Project developed in partnership with Abundance Brasil.',
     stack: ['AWS', 'Python', 'AI', 'NextJS'],
     sourceCode: 'https://github.com/Inteli-College/2024-2A-T02-EC11-G03',
     livePreview: 'https://inteli-college.github.io/2024-2A-T02-EC11-G03/',

@@ -1,6 +1,7 @@
 import uniqid from 'uniqid'
 import { projects } from '../../portfolio'
 import ProjectContainer from '../ProjectContainer/ProjectContainer'
+import ProjectCard from '../ProjectCard/ProjectCard'
 import './Projects.css'
 
 const Projects = () => {
@@ -12,7 +13,15 @@ const Projects = () => {
 
       <div className='projects__grid'>
         {projects.map((project) => (
+          // <ProjectContainer key={uniqid()} project={project} />
+          <ProjectCard key={uniqid()} project={project} />
+        ))}
+      </div>
+
+      <div className='projects__grid'>
+        {projects.map((project) => (
           <ProjectContainer key={uniqid()} project={project} />
+          // <ProjectCard key={uniqid()} project={project} />
         ))}
       </div>
     </section>
