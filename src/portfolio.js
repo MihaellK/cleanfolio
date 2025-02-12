@@ -23,8 +23,8 @@ const gameProjects = [
     briefDescription:'In-Development Racing Card Game. Selected for Trovalad Incubation Program',
     description:
       'Low-Poly Racing Card Game conceived during the HUG Jam, it was soon selected for incubation at Trovadoria. Since then, it has been showcased and featured in various game events, including EAI Jogos, HUG Verso, FIAP, and Inteli GameLab Showcase. I worked as a Game Designer, Lead Programmer, and contributed to the business aspects. It is currently my graduation thesis (TCC)',
-    image: '',
-    images: ['https://picsum.photos/id/238/200/300', 'https://picsum.photos/id/225/200/300',],
+    image: 'https://raw.githubusercontent.com/MihaellK/cleanfolio/refs/heads/main/public/imgs/capa_pitchDeck.jpeg',
+    images: ['https://github.com/MihaellK/cleanfolio/blob/main/public/imgs/print-game-fia-version.jpeg?raw=true', 'https://github.com/MihaellK/cleanfolio/blob/main/public/imgs/trovalab-pitchday.JPG?raw=true',],
     stack: ['Unity', 'C#', 'Game Design', 'Design Patterns', 'AI Navmesh', 'Business',],
     responsibilities: ['Designed the core gameplay loop integrating cards and racing mechanics.', 'Architected and implemented the Race AI system using Unity’s NavMesh.', 'Successfully formatted and submitted the project for a public call.',],
     achievements: [ 'EAI Jogos – Showcased to the public at ', 'HUGVerso Pitch Competition – Selected project', 'Trovalab – Selected for Trovadoria’s Incubation Program','Pitch Deck - Created and presented a professional pitch deck',],
