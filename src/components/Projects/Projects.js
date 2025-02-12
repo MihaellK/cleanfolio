@@ -1,5 +1,5 @@
 import uniqid from 'uniqid'
-import { projects } from '../../portfolio'
+import { projects, gameProjects } from '../../portfolio'
 import ProjectContainer from '../ProjectContainer/ProjectContainer'
 import ProjectCard from '../ProjectCard/ProjectCard'
 import './Projects.css'
@@ -9,14 +9,16 @@ const Projects = () => {
 
   return (
     <section id='projects' className='section projects'>
-      <h2 className='section__title'>Projects</h2>
+      <h2 className='section__title'>Game Development</h2>
 
       <div className='projects__grid'>
-        {projects.map((project) => (
+        {gameProjects.map((project) => (
           // <ProjectContainer key={uniqid()} project={project} />
           <ProjectCard key={uniqid()} project={project} />
         ))}
       </div>
+
+      <h2 className='section__title'>Web Development</h2>
 
       <div className='projects__grid'>
         {projects.map((project) => (
