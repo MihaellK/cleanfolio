@@ -9,7 +9,7 @@ const about = {
   name: 'Mihaell Alves',
   role: 'Software and Game Developer',
   description:
-    "I am a Developer with experience in fullstack development, game design, and cloud computing. Specialized in Unity game development and web technologies, with a strong background in AI programming, computer vision, and data processing. Worked on projects ranging from VR and AI-driven racing games to image analysis pipelines using AWS Lambda. Founder of Inteli Game Lab, leading game development initiatives and user-focused innovation. Passionate about building immersive experiences.", 
+    "I am a Developer with experience in fullstack development, game design, and cloud computing. Specialized in Unity game development and web technologies. Worked on projects ranging from VR and AI-driven racing games to image analysis pipelines. Founder of Inteli Game Lab, leading game development initiatives and passionate about building immersive experiences.", 
   resume: 'https://docs.google.com/document/d/e/2PACX-1vSh14oKDyt4gELqtWPPg7RYrI1ROd5Dreng5teoDdLcLAcM3iqfMkSWHUmo6UbQgiw3QYXGZBNiRwDa/pub',
   itchio: 'https://mihaellk.itch.io',
   social: {
